@@ -49,7 +49,7 @@ class Carro{
   }
 }
 
-void main(){
+/*void main(){
   //instacia de um objeto
   Carro carro1 = Carro('Hyundai HB20');
   Carro carro2 = Carro('Volkswagen Gol');
@@ -72,5 +72,28 @@ void main(){
   //for convencional
   for(int i = 0; i< carros.length; i++){
     print('Carro: ${carros[i].modelo}');
+  }
+}*/
+
+void main(){
+  
+  Carro carro1 = Carro('Hyundai HB20');
+  Carro carro2 = Carro('Volkswagen Gol');
+  Carro carro3 = Carro('Fiat Argo');
+  
+  //map é um par de chave e valor, igual ao json
+  final carrosMap = {'1':carro1, '2':carro2, '3':carro3};
+  
+  print('Lista: ${carrosMap.length}');
+  
+  // for usando a "KEY(id)" do map
+  for(String id in carrosMap.keys){
+    final carroTemp = carrosMap[id];
+    print('>>${carroTemp?.modelo}');
+  }
+  print('----------------------');
+  // for usando os valores o map
+  for(Carro carroTemp in carrosMap.values){
+    print('>>${carroTemp.modelo}');
   }
 }
