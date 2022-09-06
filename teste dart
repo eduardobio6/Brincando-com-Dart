@@ -1,0 +1,76 @@
+import 'dart:html';
+/*void main(){
+
+  int idade = 2022 - 1975;
+
+  print("Minha idade é " + idade.toString());
+
+ if (idade < 30){
+   print('Você é um adulto jovem');
+ }
+  else if(idade > 31){
+    print('Você é um adulto mais sério'); 
+ } 
+}*/
+
+/*void main(){
+  String nome = 'Rubens Lara';
+  int idade = 20;
+  double altura = 1.71;
+  bool isGeek = true;
+  List<String> lista = ['Fatec','SI'];
+  
+  /*print(idade);
+  print(altura);
+  print(isGeek);
+  print(lista);*/
+  
+  if(isGeek == true){
+    print('Meu nome é $nome');
+    print('Minha idade é $idade');
+    print('E estudo na ${lista[0]} no curso de ${lista[1]}');
+  }  
+  else {
+    print('Você não é geek camarada!!!!');
+  }
+  
+  for(int x = 0; x <= 5; x++){
+    print("Num $x");
+  }
+}*/
+//Sintaxe class em dart
+class Carro{
+  String modelo;
+  
+  Carro(this.modelo);
+  //Poliformismo
+  String toString(){
+    return modelo;  
+  }
+}
+
+void main(){
+  //instacia de um objeto
+  Carro carro1 = Carro('Hyundai HB20');
+  Carro carro2 = Carro('Volkswagen Gol');
+  Carro carro3 = Carro('Fiat Argo');
+  
+  //lista de arrays
+  final carros = [];
+  //add dados no array
+  carros.add(carro1);
+  carros.add(carro2);
+  carros.add(carro3);
+  
+  print ('Carros disponiveis:${carros.length}');
+  
+  //for each
+  for(Carro carroTemp in carros){
+    print('Carro Disponivel: ${carroTemp.modelo}');
+  }
+  
+  //for convencional
+  for(int i = 0; i< carros.length; i++){
+    print('Carro: ${carros[i].modelo}');
+  }
+}
